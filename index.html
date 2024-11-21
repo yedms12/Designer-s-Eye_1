@@ -18,15 +18,15 @@
     
     .cursor {
       position: fixed;
-      width: 50px; /* 커서 크기 */
+      width: 50px; 
       height: 50px;
-      background-color: white; /* 반전 효과를 위한 배경색 */
-      border-radius: 50%; /* 원형 */
-      pointer-events: none; /* 클릭 이벤트 무시 */
-      mix-blend-mode: difference; /* 배경과 대비되는 색상 반전 */
+      background-color: white;
+      border-radius: 50%; 
+      pointer-events: none; 
+      mix-blend-mode: difference; 
       transform: translate(-50%, -50%);
-      z-index: 1000; /* 최상위에 표시 */
-      transition: transform 0.1s ease; /* 부드럽게 이동 */
+      z-index: 1000; 
+      transition: transform 0.1s ease;
     }
 
     .game-container {
@@ -36,8 +36,8 @@
 
     .shape-container {
       position: relative;
-      width: 450px; /* 1.5배 크기 */
-      height: 450px; /* 1.5배 크기 */
+      width: 450px; 
+      height: 450px; 
       margin: 20px auto;
       border: 1px solid #ccc;
       display: flex;
@@ -47,8 +47,8 @@
 
     .dot {
       position: absolute;
-      width: 15px; /* 기존 크기 10px의 1.5배 */
-      height: 15px; /* 기존 크기 10px의 1.5배 */
+      width: 15px;
+      height: 15px; 
       background-color: black;
       border-radius: 50%;
     }
@@ -145,7 +145,7 @@
   <script>
   const cursor = document.getElementById("cursor");
 
-  // 마우스 움직임에 따라 cursor 위치 업데이트
+
   document.addEventListener("mousemove", (e) => {
     cursor.style.left = `${e.pageX}px`;
     cursor.style.top = `${e.pageY}px`;
@@ -219,10 +219,10 @@
   function initGame() {
     createRandomShape();
 
-    // 현재 질문 번호가 정중앙 질문인지 확인
+    
     if (questionsWithCenter.includes(currentQuestion)) {
       dot.style.left = "217.5px";
-      dot.style.top = "217.5px"; // 점을 중앙에 배치 (450px 컨테이너에서 중심 좌표는 225px)
+      dot.style.top = "217.5px"; 
     } else {
       const offsetX = (Math.random() * 30 - 15).toFixed(2); // 약간의 오차 추가
       const offsetY = (Math.random() * 30 - 15).toFixed(2);
